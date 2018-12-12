@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/asss78"
+    tools:context=".PhoneAuthActivity">
+
+    <LinearLayout
+        android:layout_marginTop="285dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/asss78">
+
+    </LinearLayout>
+
+    <include layout="@layout/content_activity_asignin"
+        android:id="@+id/include" />
+
+</android.support.design.widget.CoordinatorLayout>

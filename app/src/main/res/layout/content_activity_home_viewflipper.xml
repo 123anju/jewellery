@@ -1,0 +1,134 @@
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/textBorder"/>
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:measureAllChildren="false"
+        android:id="@+id/viewFlipper">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ass4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ass6" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ass56" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss8" />
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss15" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss22" />
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss56" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss67" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss22" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss17" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss78" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss24" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss24" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asss3" />
+
+    </ViewFlipper>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/splash"/>
+
+</LinearLayout>

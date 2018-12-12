@@ -1,0 +1,67 @@
+<resources>
+
+    <string name="log_out_user">Log out user</string>
+    <string name="app_name">Jewellery</string>
+
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title">Live Love Eat</string>
+    <string name="sendotp_key">189220Aq9Pg4Y73aNq5a3caf3f</string>
+    <string name="slogan">Jewellery</string>
+    <string name="appbar_scolling_view_behavior">appbar_scolling_view_behavior</string>
+
+
+    <string name="sample_title">ChatKit for Android</string>
+    <string name="view">View</string>
+    <string name="sample_title_default">Default view</string>
+    <string name="sample_subtitle_default">Dialogs and messages with default style</string>
+    <string name="sample_title_attrs">Styled view</string>
+    <string name="sample_subtitle_attrs">Styled components using embedded attributes</string>
+    <string name="sample_title_layout">Custom layout</string>
+    <string name="sample_subtitle_layout">Custom layouts to change default views position</string>
+    <string name="sample_title_holder">Custom view holder</string>
+    <string name="sample_subtitle_holder">Custom view holder to extend default behaviour for a new features</string>
+    <string name="sample_title_custom_content">Custom content type</string>
+    <string name="sample_subtitle_custom_content">Custom message content on the example of voice message</string>
+    <string name="hint_enter_a_message">Type a message…</string>
+    <string name="on_log_click_message">Your custom long click handler</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_copy">Copy</string>
+    <string name="copied_message">Message copied!</string>
+    <string name="date_header_today">Today</string>
+    <string name="date_header_yesterday">Yesterday</string>
+    <string name="termss_and_conditions">These professionally drafted standard terms and conditions are designed for a broad range of businesses, and can be easily tailored to meet your needs. Updated Doorstep Selling Terms and Conditions and all related other Terms of Business, compliant with the new consumer sales regulations that came into force on 13th June 2014, are available.
+
+Updated Distance Selling Terms and Conditions are available at Website and E-Commerce Terms and Conditions.
+
+The terms of business templates within this group will help to ensure that both parties in any transaction are fully aware of their rights and obligations, and help to ensure a smooth and efficient transaction. Constructed in Microsoft Word, the terms  conditions templates are simple to use and easily editable.
+
+From standard terms and conditions templates of sale and services to more specific terms for particular trades and professions, the business document templates can be applied to your business with ease.
+
+For website terms conditions templates, click on the website standard terms and conditions in the right hand column of this page. Please click on the links below to view details of the range of documents available.
+
+Services Terms and Conditions Templates
+Goods and Services Terms and Conditions
+Terms and Conditions Sale of Goods
+Short Form Single A4 Page Terms and Conditions
+Professional Fitness, Dance and Gym Services Terms and Conditions
+Professional and Trade Terms and Conditions
+Doorstep Sales Terms and Conditions
+Recruitment Company Terms and Conditions
+Events and Hospitality Terms and Conditions
+Car Maintenance Terms and Conditions
+Hire and Rental Terms and Conditions</string>
+    <string name="query">For any queries and complaints kindly write to us at info@Jewellery.com</string>
+    <string name="failed">failed</string>
+    <string name="sending_sms">sending_mail</string>
+    <string-array name="view_types_dialog">
+        <item name="image">Image (default)</item>
+        <item name="voice">Voice message (custom)</item>
+    </string-array>
+
+
+</resources>

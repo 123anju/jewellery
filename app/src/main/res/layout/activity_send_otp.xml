@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sendotpbackgrond"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saurabhomer.Jewellery.SendOtp">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/slogan"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:textColor="@color/splash"
+        android:id="@+id/txtSlogan"
+        android:text="SEND OTP"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:layout_height="0dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtemail"
+            android:text="anjalianlali@gmail.com"
+            android:hint="Enter Your Email" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/sendotp"
+            android:text="Send Otp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/sending_sms"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:textSize="18sp"/>-->
+    <TextView
+        android:id="@+id/resend_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Resend via Email()"
+        android:textColor="@color/splash"
+        android:textSize="16sp"/>
+    <!--<TextView-->
+        <!--android:id="@+id/numberText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:hint="Enter Otp"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:textSize="18sp"/>-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="4"-->
+        <!--android:layout_height="0dp">-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/numberText"-->
+            <!--android:text=""-->
+            <!--android:hint="Enter OTP" />-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+    <com.chaos.view.PinView
+        android:id="@+id/numberText"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Hint."
+        android:inputType="number"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:cursorVisible="true"
+        />
+
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/enter"
+        android:text="Enter"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"
+        app:buttonColor="@color/btnSignActive"
+        android:layout_weight="2"
+        android:layout_height="0dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressIndicator"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/progress"
+        android:indeterminateDuration="3000"
+        android:visibility="invisible"/>
+
+</LinearLayout>

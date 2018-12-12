@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "738452043392",
+    "firebase_url": "https://jewellery-77612.firebaseio.com",
+    "project_id": "jewellery-77612",
+    "storage_bucket": "jewellery-77612.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738452043392:android:c95699f18fad4158",
+        "android_client_info": {
+          "package_name": "com.JewelleryShop.Jewellery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738452043392-7u36hbm1ntaahtj9mketdsgthmsadcq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtq0NNUf4Ju1ewA4QdVO4G5ef5bL4uYrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

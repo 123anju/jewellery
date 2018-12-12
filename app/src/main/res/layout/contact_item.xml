@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            app:civ_border_color="@color/splash"
+            android:layout_marginLeft="2dp"/>
+
+        <!--<ImageView android:layout_width="100dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:id="@+id/image_view"/>-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/splash"
+            android:gravity="left"
+            android:id="@+id/Name"/>
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/splash"
+            android:gravity="left"
+            android:id="@+id/City"/>
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/splash"
+            android:gravity="left"
+            android:id="@+id/Phone"/>
+
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/splash"
+            android:gravity="left"
+            android:id="@+id/Email"/>
+    </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
