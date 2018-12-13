@@ -57,15 +57,15 @@ public class Home1 extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         categoryId =getIntent().getStringExtra("CategoryId");
         setSupportActionBar(toolbar);
-        Toast.makeText(this, "app", Toast.LENGTH_SHORT).show();
+
         if(categoryId.equals("0"))
         {
             item ="Neckless";
-            Toast.makeText(this, "abc", Toast.LENGTH_SHORT).show();
+
         }
         else if(categoryId.equals("02"))
         {
-            Toast.makeText(this, "02", Toast.LENGTH_SHORT).show();
+
             item="Bracelet";
         }
         else if(categoryId.equals("03"))
@@ -76,14 +76,9 @@ public class Home1 extends AppCompatActivity {
         {
             item="offers";
         }
-        else if(categoryId.equals("1"))
-        {
-            //Toast.makeText(this, "biryani Home1", Toast.LENGTH_SHORT).show();
-            item = "biryani247";
-        }
 
 
-        //Toast.makeText(this, ""+item, Toast.LENGTH_SHORT).show();
+
         toolbar.setTitle(item);
     //       Toast.makeText(this, ""+item+"kkk", Toast.LENGTH_SHORT).show();
         category =database.getReference("Menu/"+item);
@@ -91,8 +86,6 @@ public class Home1 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
                 Intent cartIntent =new Intent(Home1.this,Cart.class);
                 startActivity(cartIntent);
 
@@ -104,26 +97,11 @@ public class Home1 extends AppCompatActivity {
         fab.setCount(new CreateDB(this).getTotalItem());
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
 
-//        for(int i=0;i<image.length;i++)
-//        {
-//            ImageView imageView=new ImageView(this);
-//            imageView.setImageResource(image[i]);
-//            viewFlipper.addView(imageView);
-//
-//        }
-
         viewFlipper.setFlipInterval(2000);
         viewFlipper.setAutoStart(true);
-
-        //set Name for user
-//        txtFullName.setText(Common.currentUser.getName());
-        //Load menu
         recyler_menu = (RecyclerView) findViewById(R.id.recycler_menu);
         recyler_menu.setHasFixedSize(true);
 
-
-//            layoutManager= new LinearLayoutManager(this);
-//            recyler_menu.setLayoutManager(layoutManager);
 
         recyler_menu.setLayoutManager(new GridLayoutManager(this,2));
         if(Common.isConnectedToInterner(this))

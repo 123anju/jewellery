@@ -140,7 +140,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Get category and send to new Activity
                             Intent foodList = new Intent(Home.this, Home1.class);
-                            Toast.makeText(Home.this, "iske age jo ae batana " + position, Toast.LENGTH_SHORT).show();
                             foodList.putExtra("CategoryId", adapter.getRef(position).getKey());
                             startActivity(foodList);
                     }
