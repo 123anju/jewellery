@@ -9,13 +9,13 @@ public enum AppEnvironment {
     SANDBOX {
         @Override
         public String merchant_Key() {
-            return "q2v0O0i2";
-        }  //O15vkB
+            return "O15vkB";
+        }  //O15vkB q2v0O0i2
 
         @Override
         public String merchant_ID() {
-            return "5984619";
-        }   //4819816
+            return "4819816";
+        }   //4819816 5984619
 
         @Override
         public String furl() {
@@ -29,8 +29,8 @@ public enum AppEnvironment {
 
         @Override
         public String salt() {
-            return "Sisj4IXrql";
-        }
+            return "LU1EhObh";
+        } //Sisj4IXrql
 
         @Override
         public boolean debug() {
@@ -40,12 +40,12 @@ public enum AppEnvironment {
     PRODUCTION {
         @Override
         public String merchant_Key() {
-            return "q2v0O0i2";
-        }  //O15vkB
+            return "O15vkB";
+        }  //O15vkB q2v0O0i2
 
         @Override
         public String merchant_ID() {
-            return "5984619";
+            return "4819816";
         }   //4819816
 
         @Override
@@ -60,8 +60,8 @@ public enum AppEnvironment {
 
         @Override
         public String salt() {
-            return "Sisj4IXrql";
-        }     //LU1EhObh
+            return "LU1EhObh";
+        }     //LU1EhObh Sisj4IXrql
 
         @Override
         public boolean debug() {

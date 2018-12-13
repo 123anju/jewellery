@@ -90,8 +90,10 @@ public class Cart extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     //Create new Request
-                if(cart.size()> 0)
+                if(cart.size()> 0) {
                     showAlertDialog();
+
+                }
                 else
                     Toast.makeText(Cart.this, "Your Cart is Empty!!!", Toast.LENGTH_SHORT).show();
 
@@ -151,26 +153,6 @@ public class Cart extends AppCompatActivity {
     private void showAlertDialog() {
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(Cart.this);
         alertDialog.setTitle("One More Step!");
-        if(cart.get(0).getRefer().equals("biriyani247") || cart.get(0).getRefer().equals("biryani247") || cart.get(0).getRefer().equals("Biryani247") || cart.get(0).getRefer().equals("BIRYANI247")  )
-        {
-            location="";
-            location_email="info@biryani247.com";
-        }
-        else if(cart.get(0).getRefer().equals("fitmeals"))
-        {
-            location="";
-            location_email="info@fitmeals.co.in";
-        }
-        else if(cart.get(0).getRefer().equals("esycook") ||cart.get(0).getRefer().equals("Ezycook"))
-        {
-            location="";
-            location_email="info@ezycook.in";
-        }
-        else if(cart.get(0).getRefer().equals("railrestro"))
-        {
-            location="";
-
-        }
         alertDialog.setMessage("Enter Your Address "+location);
         final EditText edtAddress = new EditText(Cart.this);
         LinearLayout.LayoutParams lp= new LinearLayout.LayoutParams
@@ -179,7 +161,7 @@ public class Cart extends AppCompatActivity {
                 LinearLayout.LayoutParams.MATCH_PARENT
         );
         edtAddress.setLayoutParams(lp);
-       // Toast.makeText(this, ""+foodcharge.getText().toString(), Toast.LENGTH_SHORT).show();
+
         if(foodcharge.getText().toString().equals("0"))
         {
             extraprice.setText("0");
@@ -204,8 +186,6 @@ public class Cart extends AppCompatActivity {
                     ordertype="Onlinepayment";
                     Intent intent=new Intent(Cart.this,OnlinePayment.class);
                     startActivity(intent);
-
-
                 }
             }
         });
@@ -229,35 +209,6 @@ public class Cart extends AppCompatActivity {
         return html;
     }
 
-    private void sendTestEmail() {
-        String s = getdata();
-       // Toast.makeText(this, ""+total, Toast.LENGTH_SHORT).show();
-        BackgroundMail.newBuilder(this)
-                //.withUsername("anjalisonu1111@gmail.com")
-                .withUsername("infoJewellery@gmail.com")
-                .withPassword("Dlf@201889")
-                .withMailto("infoJewellery@gmail.com")
-                //.withMailto("saurabhomer258@gmail.com")
-                //.withMailto("anjalianlali@gmail.com")
-                .withType("text/html")
-                .withSubject("Order is placed")
-                .withBody("<br><b>Customer  Name : </b>"+Common.currentUser.getName()+"<br><b>Customer Address :</b>"+  Cart.address+" "+location+"<br><b>Mobile Number :</b>"+Common.currentUser.getPhone()+"<br><b>order has been placed</b><br><hr>" + s+"<br><b>Convinience Charges:</b>" + extraprice.getText().toString()+"<br><b>Total Price:</b>" + txtTotalPrice.getText().toString()+"<br><hr>" )
-                .withOnSuccessCallback(new BackgroundMail.OnSuccessCallback() {
-                    @Override
-                    public void onSuccess() {
-                        //Toast.makeText(Cart.this, "as", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .withOnFailCallback(new BackgroundMail.OnFailCallback() {
-                    @Override
-                    public void onFail()
-                    {
-                        //  Toast.makeText(Cart.this, "sadh", Toast.LENGTH_SHORT).show();
-//do some magic
-                    }
-                })
-                .send();
-    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
