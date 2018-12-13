@@ -201,34 +201,6 @@ public class Cart extends AppCompatActivity {
                 else {
 
                     address = edtAddress.getText().toString();
-                   // Toast.makeText(Cart.this, ""+address1, Toast.LENGTH_SHORT).show();
-
-                   // Toast.makeText(Cart.this, "" + address, Toast.LENGTH_SHORT).show();
-
-
-                    //                Request request=new Request(
-                    //                        Common.currentUser.getPhone(),
-                    //                        Common.currentUser.getName(),
-                    //                        edtAddress.getText().toString(),
-                    //                        txtTotalPrice.getText().toString(),
-                    //                        cart
-                    //                );
-                    //                // Submit to firebase
-                    //                //we will using system.CurrentMill to key
-                    //                requests.child(String.valueOf(System.currentTimeMillis())).setValue(request);
-                    //                // delete  Cart
-                    //                //new Database(getBaseContext()).cleanCart();
-                    //                CreateDB db =new CreateDB(getApplicationContext());
-                    //                db.cleanCart();
-                    //
-                    //                //Toast.makeText(Cart.this, "Thank you , order Place", Toast.LENGTH_SHORT).show();
-//
-//                    Intent payment = new Intent(Cart.this, payment.class);
-//                    total+=mextraprice;
-//                    mextraprice=0;
-//                    payment.putExtra("total", total);
-//                    startActivityForResult(payment, REQ_CODE);
-
                     ordertype="Onlinepayment";
                     Intent intent=new Intent(Cart.this,OnlinePayment.class);
                     startActivity(intent);
@@ -237,97 +209,7 @@ public class Cart extends AppCompatActivity {
                 }
             }
         });
-        alertDialog.setNegativeButton("Cash On Delivery", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
 
-                if(!Common.isConnectedToInterner(Cart.this))
-                {
-                    Toast.makeText(Cart.this, "Please Check Your Connection!!!!", Toast.LENGTH_SHORT).show();
-                    return ;
-                }
-                else
-                {
-                    address = edtAddress.getText().toString();
-                if(edtAddress.getText().toString().equals(""))
-                {
-                    Toast.makeText(Cart.this, "Address is Empty, Please try again", Toast.LENGTH_SHORT).show();
-                   // alertDialog.show();
-                }
-                else
-                    {
-
-                    ordertype="COD";
-//                    Intent intent=new Intent(Cart.this,SendOtp.class);
-//                    startActivity(intent);
-//                        Intent i1=new Intent(Cart.this,Try.class);
-//                        startActivity(i1);
-//                        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-//                        Date date = new Date();
-//                        System.out.println(dateFormat.format(date)); //2016/11/16 12:08:43
-//                        String address = Cart.address;
-//                        List<Order> cart = new CreateDB(SendOtp.this).getCarts();
-//                        Request request = new Request(
-//                                Common.currentUser.getPhone(),
-//                                Common.currentUser.getName(),
-//                                address,
-//                                Cart.price,
-//                                cart, date.toString(), "Cash On Delivery"
-//                        );
-//
-//                        // Toast.makeText(Cart.this, "Cash", Toast.LENGTH_SHORT).show();
-//                        // Submit to firebase
-//                        //we will using system.CurrentMill to key
-//                        requests.child(String.valueOf(System.currentTimeMillis())).setValue(request);
-//                        // delete  Cart
-//                        //new Database(getBaseContext()).cleanCart();
-//                        CreateDB db = new CreateDB(getApplicationContext());
-//                        db.cleanCart();
-//                        mextraprice = 0;
-//
-//                        //sendTestEmail1();
-//                        Cart.total = 0;
-//                        //Intent i1 = new Intent(SendOtp.this, Home.class);
-//                        //i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                        Toast.makeText(Cart.this, "Thank You,Your Order Is Placed", Toast.LENGTH_SHORT).show();
-//                        //startActivity(i1);
-//                        finish();
-
-//                    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-//                    Date date = new Date();
-//                    System.out.println(dateFormat.format(date)); //2016/11/16 12:08:43
-//                    address = edtAddress.getText().toString();
-//                    List<Order> cart = new CreateDB(Cart.this).getCarts();
-//                    Request request = new Request(
-//                            Common.currentUser.getPhone(),
-//                            Common.currentUser.getName(),
-//                            Cart.address,
-//                            Cart.price,
-//                            cart, date.toString(), "Cash On Delivery"
-//                    );
-//
-//                    // Toast.makeText(Cart.this, "Cash", Toast.LENGTH_SHORT).show();
-//                    // Submit to firebase
-//                    //we will using system.CurrentMill to key
-//                    requests.child(String.valueOf(System.currentTimeMillis())).setValue(request);
-//                    // delete  Cart
-//                    //new Database(getBaseContext()).cleanCart();
-//                    CreateDB db = new CreateDB(getApplicationContext());
-//                    db.cleanCart();
-//                    mextraprice = 0;
-//
-//                    sendTestEmail();
-//                    Cart.total = 0;
-//                    Intent i1 = new Intent(Cart.this, Home.class);
-//                    i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    Toast.makeText(Cart.this, "Thank You,Your Order Is Placed", Toast.LENGTH_SHORT).show();
-//                    startActivity(i1);
-//                    finish();
-                }
-                }
-
-            }
-        });
         alertDialog.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -393,44 +275,14 @@ public class Cart extends AppCompatActivity {
         for(Order order:cart) {
 
             total += (Integer.parseInt(order.getPrice())) * (Integer.parseInt(order.getQuantity()));
-          //  Toast.makeText(this, ""+order.getPrice(), Toast.LENGTH_SHORT).show();
-        }
-//            Locale locale =new Locale("en","Inr");
-//        NumberFormat fmt= NumberFormat.getCurrencyInstance(locale);
 
-
-        if(total>0 && total<100)
-        {
-            mextraprice=5;
-           // Toast.makeText(this, "a", Toast.LENGTH_SHORT).show();
         }
-        else if(total>=100 && total<200)
-        {
-            mextraprice=10;
-            //Toast.makeText(this, "b", Toast.LENGTH_SHORT).show();
-        }
-        else if(total>=200 && total<300)
-        {
-            mextraprice=15;
-            //Toast.makeText(this, "c", Toast.LENGTH_SHORT).show();
-        }
-        else if(total>=300)
-        {
-            mextraprice=20;
-            //Toast.makeText(this, "d", Toast.LENGTH_SHORT).show();
-        }
-        extraprice.setText(String.valueOf(mextraprice));
-        foodcharge.setText(String.valueOf(total));
-        txtTotalPrice.setText(String.valueOf(total+mextraprice));
-        conveni=mextraprice;
-
     }
     //Press ctrl+o
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if(item.getTitle().equals(Common.DELETE))
-           // Toast.makeText(this, "a"+Common.DELETE, Toast.LENGTH_SHORT).show();
             deleteCart(item.getOrder());
 
         return true;
@@ -457,15 +309,7 @@ public class Cart extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
 
-        //After that , we will delete all data  from  SQLite
-        //new CreateDB(context).deletetoId(id);
-        //And final , we will update new data from List<Order> to SQlite
-//        new CreateDB(context).cleanCart();
-//        for(Order item:cart)
-//            new CreateDB(context).addTOCard(item);
         refresh();
-        //Toast.makeText(context, "aaaaa", Toast.LENGTH_SHORT).show();
-
     }
     public static void refresh()
     {
@@ -473,11 +317,8 @@ public class Cart extends AppCompatActivity {
         for(Order order:cart) {
 
             total += (Integer.parseInt(order.getPrice())) * (Integer.parseInt(order.getQuantity()));
-            //  Toast.makeText(this, ""+order.getPrice(), Toast.LENGTH_SHORT).show();
-        }
-//            Locale locale =new Locale("en","Inr");
-//        NumberFormat fmt= NumberFormat.getCurrencyInstance(locale);
 
+        }
         mextraprice=0;
         if(total>0 && total<100)
         {

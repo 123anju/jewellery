@@ -91,19 +91,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
         fab.setCount(new CreateDB(this).getTotalItem());
-//        fab.setColorFilter(Color.YELLOW);
-//        fab.setRippleColor(Color.RED);
-//        fab.setColorFilter(Color.GREEN);
-//        fab.setDrawingCacheBackgroundColor(Color.GRAY);
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
-
-//        for(int i=0;i<image.length;i++)
-//        {
-//            ImageView imageView=new ImageView(this);
-//            imageView.setImageResource(image[i]);
-//            viewFlipper.addView(imageView);
-//
-//        }
 
         viewFlipper.setFlipInterval(2000);
         viewFlipper.setAutoStart(true);
@@ -116,20 +104,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        //set Name for user
         View headerView = navigationView.getHeaderView(0);
         txtFullName=(TextView) headerView.findViewById(R.id.txtFullName);
         txtMobile=(TextView)headerView.findViewById(R.id.txtMobile);
-//        txtFullName.setText(Common.currentUser.getName());
-//        txtMobile.setText(Common.currentUser.getPhone());
         //Load menu
         recyler_menu = (RecyclerView) findViewById(R.id.recycler_menu);
         recyler_menu.setHasFixedSize(true);
-
-
-//            layoutManager= new LinearLayoutManager(this);
-//            recyler_menu.setLayoutManager(layoutManager);
 
         recyler_menu.setLayoutManager(new GridLayoutManager(this,1));
         if(Common.isConnectedToInterner(this))
@@ -160,7 +140,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Get category and send to new Activity
                             Intent foodList = new Intent(Home.this, Home1.class);
-                            //Toast.makeText(Home.this, "+" + position, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Home.this, "iske age jo ae batana " + position, Toast.LENGTH_SHORT).show();
                             foodList.putExtra("CategoryId", adapter.getRef(position).getKey());
                             startActivity(foodList);
                     }
@@ -210,9 +190,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         } else if (id == R.id.nav_cart) {
             Intent cartIntent = new Intent(Home.this,Cart.class);
             startActivity(cartIntent);
-        } else if (id == R.id.nav_orders) {
-            Intent orderIntent = new Intent (Home.this,OrderStatus.class);
-            startActivity(orderIntent);
         } else if(id == R.id.nav_log_out){
 
             //Logout
@@ -243,27 +220,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             //Setting the title manually
             alert.show();
        }
-// else if(id==R.id.nav_offer) {
-//            Intent offer = new Intent(Home.this, Offer.class);
-//            offer.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            startActivity(offer);
-//        }
-//         else if(id==R.id.nav_blog)
-//        {
-//            Intent blog = new Intent(Home.this,Blog.class);
-//            blog.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            startActivity(blog);
-//        } else if(id==R.id.terms_and_conditions)
-//        {
-////            Intent intent = new Intent(Home.this,terms_and_condition.class);
-////            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-////            startActivity(intent);
-//        } else if(id==R.id.contact)
-//        {
-//            Intent intent = new Intent(Home.this,Contact_Detail.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            startActivity(intent);
-//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

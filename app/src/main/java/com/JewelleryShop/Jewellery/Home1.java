@@ -57,22 +57,31 @@ public class Home1 extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         categoryId =getIntent().getStringExtra("CategoryId");
         setSupportActionBar(toolbar);
-        if(categoryId.equals("01"))
+        Toast.makeText(this, "app", Toast.LENGTH_SHORT).show();
+        if(categoryId.equals("0"))
         {
-            item="biryani247";
+            item ="Neckless";
+            Toast.makeText(this, "abc", Toast.LENGTH_SHORT).show();
         }
         else if(categoryId.equals("02"))
         {
-            item="fitmeals";
+            Toast.makeText(this, "02", Toast.LENGTH_SHORT).show();
+            item="Bracelet";
         }
         else if(categoryId.equals("03"))
         {
-            item="ezycook";
+            item="Ring";
         }
         else if(categoryId.equals("04"))
         {
-            item="railrestro";
+            item="offers";
         }
+        else if(categoryId.equals("1"))
+        {
+            //Toast.makeText(this, "biryani Home1", Toast.LENGTH_SHORT).show();
+            item = "biryani247";
+        }
+
 
         //Toast.makeText(this, ""+item, Toast.LENGTH_SHORT).show();
         toolbar.setTitle(item);
@@ -142,16 +151,14 @@ public class Home1 extends AppCompatActivity {
                        // Toast.makeText(Home1.this, ""+model.getName(), Toast.LENGTH_SHORT).show();
                         if(position==0)
                         {
-                            Intent foodList = new Intent(Home1.this, FoodList.class);
-                            foodList.putExtra("item",model.getName());
-                            foodList.putExtra("comp",item);
-                            startActivity(foodList);
+                            Intent jewelleryList = new Intent(Home1.this, JewelleryList.class);
+                            jewelleryList.putExtra("item",model.getName());
+                            jewelleryList.putExtra("comp",item);
+                            startActivity(jewelleryList);
                         }
-                        else
-                        {
+                        else {
                             Toast.makeText(Home1.this, "Coming soon", Toast.LENGTH_SHORT).show();
                         }
-
                     }
                 });
             }
